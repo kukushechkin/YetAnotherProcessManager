@@ -10,6 +10,8 @@
 		747E398B20618719001FFE44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747E398A20618719001FFE44 /* AppDelegate.swift */; };
 		747E398D20618719001FFE44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 747E398C20618719001FFE44 /* Assets.xcassets */; };
 		747E399020618719001FFE44 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 747E398E20618719001FFE44 /* MainMenu.xib */; };
+		747E399A20618868001FFE44 /* ProcessManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 747E399920618868001FFE44 /* ProcessManager.mm */; };
+		747E399D20618C66001FFE44 /* Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747E399C20618C66001FFE44 /* Process.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,10 @@
 		747E398F20618719001FFE44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		747E399120618719001FFE44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		747E399220618719001FFE44 /* YetAnotherProcessManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YetAnotherProcessManager.entitlements; sourceTree = "<group>"; };
+		747E399820618867001FFE44 /* YetAnotherProcessManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YetAnotherProcessManager-Bridging-Header.h"; sourceTree = "<group>"; };
+		747E399920618868001FFE44 /* ProcessManager.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ProcessManager.mm; sourceTree = "<group>"; };
+		747E399B20618883001FFE44 /* ProcessManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProcessManager.h; sourceTree = "<group>"; };
+		747E399C20618C66001FFE44 /* Process.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Process.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,10 @@
 				747E398E20618719001FFE44 /* MainMenu.xib */,
 				747E399120618719001FFE44 /* Info.plist */,
 				747E399220618719001FFE44 /* YetAnotherProcessManager.entitlements */,
+				747E399920618868001FFE44 /* ProcessManager.mm */,
+				747E399B20618883001FFE44 /* ProcessManager.h */,
+				747E399820618867001FFE44 /* YetAnotherProcessManager-Bridging-Header.h */,
+				747E399C20618C66001FFE44 /* Process.swift */,
 			);
 			path = YetAnotherProcessManager;
 			sourceTree = "<group>";
@@ -92,6 +102,7 @@
 				TargetAttributes = {
 					747E398620618719001FFE44 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -132,6 +143,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				747E398B20618719001FFE44 /* AppDelegate.swift in Sources */,
+				747E399A20618868001FFE44 /* ProcessManager.mm in Sources */,
+				747E399D20618C66001FFE44 /* Process.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = YetAnotherProcessManager/YetAnotherProcessManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -267,6 +281,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kukushechkin.YetAnotherProcessManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YetAnotherProcessManager/YetAnotherProcessManager-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -275,6 +291,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = YetAnotherProcessManager/YetAnotherProcessManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -283,6 +300,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kukushechkin.YetAnotherProcessManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YetAnotherProcessManager/YetAnotherProcessManager-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
