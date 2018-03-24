@@ -8,12 +8,17 @@
 
 import Cocoa
 
-class Process: NSObject {
-    @objc dynamic var pid: Int = 0
+@objc class Process: NSObject {
+    @objc dynamic var pid: String = "0"
     @objc dynamic var name: String = ""
     
-    override init() {
-        self.pid = 42
-        self.name = "a name"
+    @objc init(pid: Int, andName name: String) {
+        self.pid = String(pid)
+        self.name = name
+    }
+
+    @objc init(pid: Int) {
+        self.pid = String(pid)
+        self.name = ""
     }
 }
