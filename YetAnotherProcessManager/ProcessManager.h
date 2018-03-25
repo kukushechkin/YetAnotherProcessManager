@@ -7,13 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "YetAnotherProcessManager-Swift.h"
+#import "PriviledgedHelperManager.h"
+#include <libproc.h>
 
 @interface ProcessManager : NSObject
 {
-    
+    PriviledgedHelperManager * priviledgedHelperManager;
 }
 
 @property (readonly) NSArray* processes;
+
+- (void)killProcessWithPid:(pid_t)pid;
 
 @end

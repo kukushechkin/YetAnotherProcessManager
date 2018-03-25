@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7465552B2067FED80009D75F /* PriviledgedHelperManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7465552A2067FED80009D75F /* PriviledgedHelperManager.m */; };
+		7465553E206802C60009D75F /* HelperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 74655530206801250009D75F /* HelperTool.m */; };
+		7465553F206802C60009D75F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74655531206801250009D75F /* main.m */; };
+		74655544206802E00009D75F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74655543206802DF0009D75F /* Foundation.framework */; };
+		74655546206802E30009D75F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74655545206802E30009D75F /* Security.framework */; };
+		74655548206803060009D75F /* com.kukushechkin.YetAnotherProcessManager.HelperTool in CopyFiles */ = {isa = PBXBuildFile; fileRef = 746555372068027E0009D75F /* com.kukushechkin.YetAnotherProcessManager.HelperTool */; };
+		7465554F206803990009D75F /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7465554C2068035A0009D75F /* Common.m */; };
+		74655550206808ED0009D75F /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 7465554C2068035A0009D75F /* Common.m */; };
+		746555522068099A0009D75F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746555512068099A0009D75F /* Cocoa.framework */; };
+		746555532068099F0009D75F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74655545206802E30009D75F /* Security.framework */; };
+		74655555206809A00009D75F /* SecurityFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746555542068099F0009D75F /* SecurityFoundation.framework */; };
 		747E398B20618719001FFE44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747E398A20618719001FFE44 /* AppDelegate.swift */; };
 		747E398D20618719001FFE44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 747E398C20618719001FFE44 /* Assets.xcassets */; };
 		747E399020618719001FFE44 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 747E398E20618719001FFE44 /* MainMenu.xib */; };
@@ -14,7 +25,55 @@
 		747E399D20618C66001FFE44 /* Process.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747E399C20618C66001FFE44 /* Process.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		74655540206802CC0009D75F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 747E397F20618719001FFE44 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 746555362068027E0009D75F;
+			remoteInfo = HelperTool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		746555352068027E0009D75F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		74655547206802F60009D75F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchServices;
+			dstSubfolderSpec = 1;
+			files = (
+				74655548206803060009D75F /* com.kukushechkin.YetAnotherProcessManager.HelperTool in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		746555292067FED80009D75F /* PriviledgedHelperManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PriviledgedHelperManager.h; sourceTree = "<group>"; };
+		7465552A2067FED80009D75F /* PriviledgedHelperManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PriviledgedHelperManager.m; sourceTree = "<group>"; };
+		7465552E206801250009D75F /* HelperTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelperTool.h; sourceTree = "<group>"; };
+		7465552F206801250009D75F /* HelperTool-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelperTool-Info.plist"; sourceTree = "<group>"; };
+		74655530206801250009D75F /* HelperTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelperTool.m; sourceTree = "<group>"; };
+		74655531206801250009D75F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74655532206801250009D75F /* HelperTool-Launchd.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HelperTool-Launchd.plist"; sourceTree = "<group>"; };
+		746555372068027E0009D75F /* com.kukushechkin.YetAnotherProcessManager.HelperTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = com.kukushechkin.YetAnotherProcessManager.HelperTool; sourceTree = BUILT_PRODUCTS_DIR; };
+		74655543206802DF0009D75F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		74655545206802E30009D75F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7465554B2068035A0009D75F /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Common.strings; sourceTree = "<group>"; };
+		7465554C2068035A0009D75F /* Common.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		7465554D2068035A0009D75F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Common.strings; sourceTree = "<group>"; };
+		7465554E2068035A0009D75F /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		746555512068099A0009D75F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		746555542068099F0009D75F /* SecurityFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SecurityFoundation.framework; path = System/Library/Frameworks/SecurityFoundation.framework; sourceTree = SDKROOT; };
 		747E398720618719001FFE44 /* YetAnotherProcessManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YetAnotherProcessManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		747E398A20618719001FFE44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		747E398C20618719001FFE44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,21 +87,69 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		746555342068027E0009D75F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74655546206802E30009D75F /* Security.framework in Frameworks */,
+				74655544206802E00009D75F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		747E398420618719001FFE44 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74655555206809A00009D75F /* SecurityFoundation.framework in Frameworks */,
+				746555532068099F0009D75F /* Security.framework in Frameworks */,
+				746555522068099A0009D75F /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7465552D206801250009D75F /* HelperTool */ = {
+			isa = PBXGroup;
+			children = (
+				7465552E206801250009D75F /* HelperTool.h */,
+				7465552F206801250009D75F /* HelperTool-Info.plist */,
+				74655530206801250009D75F /* HelperTool.m */,
+				74655531206801250009D75F /* main.m */,
+				74655532206801250009D75F /* HelperTool-Launchd.plist */,
+			);
+			path = HelperTool;
+			sourceTree = "<group>";
+		};
+		74655542206802DF0009D75F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				746555542068099F0009D75F /* SecurityFoundation.framework */,
+				746555512068099A0009D75F /* Cocoa.framework */,
+				74655545206802E30009D75F /* Security.framework */,
+				74655543206802DF0009D75F /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		746555492068035A0009D75F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7465554A2068035A0009D75F /* Common.strings */,
+				7465554C2068035A0009D75F /* Common.m */,
+				7465554E2068035A0009D75F /* Common.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		747E397E20618719001FFE44 = {
 			isa = PBXGroup;
 			children = (
+				746555492068035A0009D75F /* Common */,
+				7465552D206801250009D75F /* HelperTool */,
 				747E398920618719001FFE44 /* YetAnotherProcessManager */,
 				747E398820618719001FFE44 /* Products */,
+				74655542206802DF0009D75F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				747E398720618719001FFE44 /* YetAnotherProcessManager.app */,
+				746555372068027E0009D75F /* com.kukushechkin.YetAnotherProcessManager.HelperTool */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +174,8 @@
 				747E399B20618883001FFE44 /* ProcessManager.h */,
 				747E399820618867001FFE44 /* YetAnotherProcessManager-Bridging-Header.h */,
 				747E399C20618C66001FFE44 /* Process.swift */,
+				746555292067FED80009D75F /* PriviledgedHelperManager.h */,
+				7465552A2067FED80009D75F /* PriviledgedHelperManager.m */,
 			);
 			path = YetAnotherProcessManager;
 			sourceTree = "<group>";
@@ -73,6 +183,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		746555362068027E0009D75F /* com.kukushechkin.YetAnotherProcessManager.HelperTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7465553B2068027E0009D75F /* Build configuration list for PBXNativeTarget "com.kukushechkin.YetAnotherProcessManager.HelperTool" */;
+			buildPhases = (
+				746555332068027E0009D75F /* Sources */,
+				746555342068027E0009D75F /* Frameworks */,
+				746555352068027E0009D75F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = com.kukushechkin.YetAnotherProcessManager.HelperTool;
+			productName = HelperTool;
+			productReference = 746555372068027E0009D75F /* com.kukushechkin.YetAnotherProcessManager.HelperTool */;
+			productType = "com.apple.product-type.tool";
+		};
 		747E398620618719001FFE44 /* YetAnotherProcessManager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 747E399520618719001FFE44 /* Build configuration list for PBXNativeTarget "YetAnotherProcessManager" */;
@@ -80,10 +207,12 @@
 				747E398320618719001FFE44 /* Sources */,
 				747E398420618719001FFE44 /* Frameworks */,
 				747E398520618719001FFE44 /* Resources */,
+				74655547206802F60009D75F /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				74655541206802CC0009D75F /* PBXTargetDependency */,
 			);
 			name = YetAnotherProcessManager;
 			productName = YetAnotherProcessManager;
@@ -100,6 +229,10 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = kukushechkin;
 				TargetAttributes = {
+					746555362068027E0009D75F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					747E398620618719001FFE44 = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
@@ -119,6 +252,7 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = 747E397E20618719001FFE44;
 			productRefGroup = 747E398820618719001FFE44 /* Products */;
@@ -126,6 +260,7 @@
 			projectRoot = "";
 			targets = (
 				747E398620618719001FFE44 /* YetAnotherProcessManager */,
+				746555362068027E0009D75F /* com.kukushechkin.YetAnotherProcessManager.HelperTool */,
 			);
 		};
 /* End PBXProject section */
@@ -143,19 +278,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		746555332068027E0009D75F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7465554F206803990009D75F /* Common.m in Sources */,
+				7465553E206802C60009D75F /* HelperTool.m in Sources */,
+				7465553F206802C60009D75F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		747E398320618719001FFE44 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74655550206808ED0009D75F /* Common.m in Sources */,
 				747E398B20618719001FFE44 /* AppDelegate.swift in Sources */,
 				747E399A20618868001FFE44 /* ProcessManager.mm in Sources */,
 				747E399D20618C66001FFE44 /* Process.swift in Sources */,
+				7465552B2067FED80009D75F /* PriviledgedHelperManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		74655541206802CC0009D75F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 746555362068027E0009D75F /* com.kukushechkin.YetAnotherProcessManager.HelperTool */;
+			targetProxy = 74655540206802CC0009D75F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		7465554A2068035A0009D75F /* Common.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7465554B2068035A0009D75F /* de */,
+				7465554D2068035A0009D75F /* en */,
+			);
+			name = Common.strings;
+			sourceTree = "<group>";
+		};
 		747E398E20618719001FFE44 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -167,6 +331,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7465553C2068027E0009D75F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AC5986BBE6;
+				INFOPLIST_FILE = "$(SRCROOT)/HelperTool/HelperTool-Info.plist";
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"HelperTool/HelperTool-Info.plist",
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"HelperTool/HelperTool-Launchd.plist",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7465553D2068027E0009D75F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AC5986BBE6;
+				INFOPLIST_FILE = "$(SRCROOT)/HelperTool/HelperTool-Info.plist";
+				OTHER_LDFLAGS = (
+					"-sectcreate",
+					__TEXT,
+					__info_plist,
+					"HelperTool/HelperTool-Info.plist",
+					"-sectcreate",
+					__TEXT,
+					__launchd_plist,
+					"HelperTool/HelperTool-Launchd.plist",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		747E399320618719001FFE44 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -215,7 +419,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -266,7 +470,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -283,7 +487,7 @@
 				DEVELOPMENT_TEAM = AC5986BBE6;
 				INFOPLIST_FILE = YetAnotherProcessManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kukushechkin.YetAnotherProcessManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kukushechkin.YetAnotherProcessManager.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YetAnotherProcessManager/YetAnotherProcessManager-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -301,7 +505,7 @@
 				DEVELOPMENT_TEAM = AC5986BBE6;
 				INFOPLIST_FILE = YetAnotherProcessManager/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kukushechkin.YetAnotherProcessManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kukushechkin.YetAnotherProcessManager.App;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YetAnotherProcessManager/YetAnotherProcessManager-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
@@ -311,6 +515,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7465553B2068027E0009D75F /* Build configuration list for PBXNativeTarget "com.kukushechkin.YetAnotherProcessManager.HelperTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7465553C2068027E0009D75F /* Debug */,
+				7465553D2068027E0009D75F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		747E398220618719001FFE44 /* Build configuration list for PBXProject "YetAnotherProcessManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -28,5 +28,10 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>SMPrivilegedExecutables</key>
+	<dict>
+		<key>com.kukushechkin.YetAnotherProcessManager.HelperTool</key>
+		<string>identifier &quot;com.kukushechkin.YetAnotherProcessManager.HelperTool&quot; and anchor apple generic and certificate leaf[subject.CN] = &quot;Mac Developer: Vladimir Kukushkin (HC97U3L35Y)&quot; and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+	</dict>
 </dict>
 </plist>

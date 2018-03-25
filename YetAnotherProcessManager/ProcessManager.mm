@@ -9,22 +9,24 @@
 // https://developer.apple.com/library/content/technotes/tn2050/_index.html
 
 #import "ProcessManager.h"
+#import "YetAnotherProcessManager-Swift.h"
 
-#include <libproc.h>
 #include <vector>
 
 @implementation ProcessManager
 
 - (instancetype)init {
     if(self = [super init]) {
-        //
+        priviledgedHelperManager = [PriviledgedHelperManager new];
     }
     return self;
 }
 
 - (NSArray*)processes {
-    // TODO: cache
-
+    
+    // NSWrokspace could be used for user processes, even in sandbox
+    // For all processes proc_listallpids
+    
     // proc_listallpids usage googled
     std::vector<pid_t> pids;
     size_t nproc = proc_listallpids(0, 0);
@@ -36,6 +38,7 @@
         }
     }
     
+    // TODO: cache processes list with std::vector
     NSMutableArray* newProccessesList = [NSMutableArray new];
     
     for(auto& pid : pids) {
@@ -45,16 +48,31 @@
         struct proc_bsdshortinfo bsdshortinfo;
         int writtenSize;
         writtenSize = proc_pidinfo(pid, PROC_PIDT_SHORTBSDINFO, 0, &bsdshortinfo, sizeof(bsdshortinfo));
+        
         if (writtenSize != (int)sizeof(bsdshortinfo)) {
             newProcess = [[Process alloc] initWithPid:pid];
         }
         else {
-            newProcess = [[Process alloc] initWithPid:pid andName:[NSString stringWithUTF8String:bsdshortinfo.pbsi_comm]];
+            NSString * processName = [NSString stringWithUTF8String:bsdshortinfo.pbsi_comm];
+            newProcess = [[Process alloc] initWithPid:pid
+                                                 name:processName
+                                               andUid:bsdshortinfo.pbsi_uid];
         }
+        
         [newProccessesList addObject:newProcess];
     }
     
+    // TODO: create NSArray right here from vector
     return newProccessesList;
+}
+
+- (void)killProcessWithPid:(pid_t)pid {
+    // TODO: check if process kill actually requires priviledge escalation
+
+    // try install priviledged helper
+    [priviledgedHelperManager installHelper];
+    
+    [priviledgedHelperManager killProcessWithPid:pid];
 }
 
 @end
