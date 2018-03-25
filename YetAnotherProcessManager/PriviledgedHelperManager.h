@@ -25,8 +25,4 @@
 
 - (void)killProcessWithPid:(pid_t)pid;
 
-// TODO: remove
-- (void)writeLicenseAction;
-- (void)readLicenseAction;
-
 @end
