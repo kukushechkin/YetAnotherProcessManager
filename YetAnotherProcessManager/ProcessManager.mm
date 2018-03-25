@@ -87,7 +87,6 @@ dispatch_source_t dispatchSource;
                 dispatch_async(dispatch_get_main_queue(), ^(void){
                     NSIndexSet * indexSet = [NSIndexSet indexSetWithIndex:[imutableCopy indexOfObject:proc]];
                     [self willChange:NSKeyValueChangeRemoval valuesAtIndexes:indexSet forKey:@"processes"];
-//                    NSLog(@"remove %d", proc.pid);
                     [processesSnapshot removeObject:proc];
                     [self didChange:NSKeyValueChangeRemoval valuesAtIndexes:indexSet forKey:@"processes"];
                 });
@@ -115,7 +114,6 @@ dispatch_source_t dispatchSource;
             dispatch_async(dispatch_get_main_queue(), ^(void){
                 NSIndexSet * indexSet = [NSIndexSet indexSetWithIndex:processesSnapshot.count];
                 [self willChange:NSKeyValueChangeInsertion valuesAtIndexes:indexSet forKey:@"processes"];
-//                NSLog(@"add %d", newProcess.pid);
                 [processesSnapshot insertObject:newProcess atIndex:processesSnapshot.count];
                 [self didChange:NSKeyValueChangeInsertion valuesAtIndexes:indexSet forKey:@"processes"];
             });
